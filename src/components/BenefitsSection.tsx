@@ -62,8 +62,16 @@ const BenefitsSection = () => {
           ))}
         </div>
 
-        <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-3xl p-8 lg:p-12">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div className="relative bg-gradient-to-r from-blue-50 to-green-50 rounded-3xl p-8 lg:p-12 overflow-hidden">
+          <div className="absolute inset-0 opacity-10">
+            <img
+              src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=400&fit=crop&auto=format"
+              alt="Семья у врача"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="text-center lg:text-left">
               <div className="text-5xl lg:text-6xl font-bold text-blue-600 mb-2">
                 70%
@@ -75,12 +83,20 @@ const BenefitsSection = () => {
                 при своевременной диагностике
               </p>
             </div>
-            <div className="flex items-center gap-4">
-              <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center">
-                <Icon name="TrendingUp" className="w-10 h-10 text-white" />
-              </div>
-              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center">
-                <Icon name="Check" className="w-8 h-8 text-white" />
+
+            <div className="flex items-center gap-6">
+              <img
+                src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=120&h=120&fit=crop&crop=face&auto=format"
+                alt="Довольный клиент"
+                className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg"
+              />
+              <div className="flex flex-col gap-2">
+                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center shadow-lg">
+                  <Icon name="TrendingUp" className="w-8 h-8 text-white" />
+                </div>
+                <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
+                  <Icon name="Check" className="w-8 h-8 text-white" />
+                </div>
               </div>
             </div>
           </div>
